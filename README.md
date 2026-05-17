@@ -37,3 +37,4 @@ Il progetto implementa una netta separazione delle responsabilità:
 
 ---
 *Powered by Gemini CLI - IBM i Modernization Suite*
+"# ibmi-project" 
