@@ -1,0 +1,13 @@
+**free
+
+dcl-ds Order_t qualified template;
+  id int(10);
+  customerId int(10);
+  orderDate date(*iso);
+  totalAmount packed(11:2);
+  status char(10);
+end-ds;
+
+dcl-c ORDER_STATUS_PENDING 'PENDING';
+dcl-c ORDER_STATUS_SHIPPED 'SHIPPED';
+dcl-c ORDER_STATUS_CANCELLED 'CANCELLED';

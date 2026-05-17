@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+
+    {
+      "label": "🔨 Compile RPGLE",
+      "type": "shell",
+      "command": "system",
+      "args": [
+        "CRTBNDRPG PGM(MYLIB/&file) SRCFILE(MYLIB/QRPGLESRC)"
+      ],
+      "problemMatcher": []
+    },
+
+    {
+      "label": "🧱 Compile SQLRPGLE",
+      "type": "shell",
+      "command": "system",
+      "args": [
+        "CRTSQLRPGI OBJ(MYLIB/&file) SRCFILE(MYLIB/QRPGLESRC)"
+      ],
+      "problemMatcher": []
+    },
+
+    {
+      "label": "🚀 Deploy to IBM i",
+      "type": "shell",
+      "command": "scp",
+      "args": [
+        "src/qrpglesrc/&file",
+        "USER@IBMHOST:/QSYS.LIB/MYLIB.LIB/QRPGLESRC.FILE/"
+      ],
+      "problemMatcher": []
+    }
+
+  ]
+}

@@ -1,0 +1,20 @@
+-- CUSTOMER Table Definition
+
+CREATE OR REPLACE TABLE CUSTOMER (
+    ID INT GENERATED ALWAYS AS IDENTITY 
+           (START WITH 1 INCREMENT BY 1),
+    NAME VARCHAR(100) NOT NULL,
+    EMAIL VARCHAR(100) NOT NULL,
+    STATUS CHAR(1) DEFAULT 'A' NOT NULL,
+    
+    PRIMARY KEY (ID)
+);
+
+LABEL ON TABLE CUSTOMER IS 'Customer Entity Table';
+
+LABEL ON COLUMN CUSTOMER (
+    ID IS 'Customer ID',
+    NAME IS 'Customer Name',
+    EMAIL IS 'Email Address',
+    STATUS IS 'Account Status'
+);
